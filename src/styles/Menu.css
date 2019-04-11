@@ -1,0 +1,27 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  z-index: 2;
+  padding-top: 10px;
+}
+ul {
+  width: 50%;
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  line-height: 50px;
+}
+
+.strip {
+  position: absolute;
+  top: 0;
+  height: 10px;
+  width: 100%;
+  left: 0;
+  background: linear-gradient(to right, #3c7974, #f4de93);
+}

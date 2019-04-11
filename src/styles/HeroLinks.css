@@ -1,0 +1,42 @@
+.heroLinks {
+  padding: 5vw 10vw;
+}
+
+.links {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  /* grid-auto-columns: minmax(100px, auto); */
+  grid-gap: 40px;
+  grid-auto-rows: minmax(50px, auto);
+  background-color: #eeeeee;
+}
+
+.links a {
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.links a p {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%);
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.links a img {
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.2s;
+  opacity: 1;
+}
+
+.links a:hover img {
+  opacity: 0.5;
+}
