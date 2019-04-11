@@ -1,4 +1,4 @@
-.nav {
+.mainMenu {
   position: fixed;
   top: 0;
   left: 0;
@@ -8,13 +8,14 @@
   z-index: 3;
   padding-top: 10px;
 }
-ul {
+.mainMenu ul {
   width: 50%;
   position: absolute;
   right: 0;
   display: flex;
   justify-content: space-around;
   line-height: 50px;
+  list-style: none;
 }
 
 .strip {
@@ -26,10 +27,19 @@ ul {
   background: linear-gradient(to right, #3c7974, #f4de93);
 }
 
-ul a {
+.mainMenu a {
   font-size: 16px;
   transition: 0.2s;
 }
-ul a:hover {
+.mainMenu a:hover {
   opacity: 0.5;
+}
+
+@media (max-width: 1024px) {
+  .mainMenu ul {
+    width: 80%;
+  }
+  .mainMenu a {
+    font-size: 14px;
+  }
 }

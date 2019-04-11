@@ -1,9 +1,66 @@
+/* ----------------------------------------------------------------------------- */
+/* HeroMenu */
+/* ----------------------------------------------------------------------------- */
+.heroMenu {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  border: 1px solid white;
+}
+.heroMenu ul {
+  display: flex;
+  justify-content: center;
+  padding: 0 25%;
+  height: 100%;
+  list-style: none;
+}
+
+.heroMenu a {
+  border: 1px solid white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+  font-size: 25px;
+  padding: 20px;
+  color: white;
+  transition: 0.3s;
+}
+
+.heroMenu:hover a {
+  color: #14555b;
+}
+
+/* .heroMenu:hover li:nth-child(2) a {
+  color: #2163de;
+}
+
+.heroMenu:hover li:nth-child(3) a {
+  color: #9d25e9;
+}
+
+.heroMenu:hover li:nth-child(4) a {
+  color: #c91d1d;
+} */
+
+.heroMenu a:hover {
+  background-color: white;
+}
+/* ----------------------------------------------------------------------------- */
+/* Overview */
+/* ----------------------------------------------------------------------------- */
+
+article {
+  padding: 160px 15vw 0;
+}
 .overview {
-  padding: 50px 15vw;
   max-height: 100vw;
 }
 
-div.gridContainer {
+div.wrapOverview {
   height: 40vw;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -34,7 +91,7 @@ img.splash {
 .name {
   grid-column: 2/5;
   grid-row: 2/3;
-  z-index: 3;
+  z-index: 2;
   color: white;
   display: flex;
   justify-content: center;
@@ -49,8 +106,8 @@ img.splash {
   background-color: white;
   grid-column: 4/6;
   grid-row: 3/4;
-  font-size: 20px;
-  padding: 10px;
+  font-size: 18px;
+  padding: 20px;
   transform: translate(20%, 20%);
 }
 
@@ -63,10 +120,69 @@ img.splash {
   }
 }
 @media (max-width: 1024px) {
+  .title {
+    font-size: 18px;
+  }
+
   .lore {
     font-size: 12px;
   }
   .name {
     font-size: 60px;
   }
+}
+
+@media (max-width: 900px) {
+  .lore {
+    padding: 10px;
+    font-size: 10px;
+  }
+}
+
+/* ----------------------------------------------------------------------------- */
+/* Hero roles */
+/* ----------------------------------------------------------------------------- */
+
+h1.role {
+  font-size: 30px;
+  text-align: center;
+}
+
+.wrapRoles {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  justify-content: space-around;
+}
+
+.bar {
+  text-transform: uppercase;
+  background-color: #3a7875;
+  height: 50px;
+  color: white;
+  line-height: 50px;
+  font-size: 20px;
+  text-align: center;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border: 2px solid #90753a;
+  min-width: 200px;
+}
+
+/* ----------------------------------------------------------------------------- */
+/* Story Section */
+/* ----------------------------------------------------------------------------- */
+div.story {
+  background-color: white;
+  box-shadow: -40px -40px #ccc;
+  padding: 20px;
+}
+
+h1 {
+  padding: 50px 0;
+  font-size: 30px;
+}
+
+p.story {
+  text-align: justify;
 }

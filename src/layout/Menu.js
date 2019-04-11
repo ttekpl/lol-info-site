@@ -4,7 +4,7 @@ import "../styles/Menu.css";
 
 const Menu = () => {
   return (
-    <nav className="nav">
+    <nav className="mainMenu">
       <div className="strip" />
       <ul>
         <Link to="/">Home</Link>
