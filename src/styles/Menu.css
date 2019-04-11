@@ -5,7 +5,7 @@
   width: 100%;
   height: 60px;
   background-color: white;
-  z-index: 2;
+  z-index: 3;
   padding-top: 10px;
 }
 ul {
@@ -24,4 +24,12 @@ ul {
   width: 100%;
   left: 0;
   background: linear-gradient(to right, #3c7974, #f4de93);
+}
+
+ul a {
+  font-size: 16px;
+  transition: 0.2s;
+}
+ul a:hover {
+  opacity: 0.5;
 }

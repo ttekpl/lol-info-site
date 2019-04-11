@@ -10,7 +10,7 @@ class HeroLinks extends React.Component {
   };
 
   componentDidMount = () => {
-    const API = `http://ddragon.leagueoflegends.com/cdn/6.24.1/data/en_US/champion.json 
+    const API = `http://ddragon.leagueoflegends.com/cdn/9.6.1/data/en_US/champion.json 
       `;
     fetch(API)
       .then(response => {
@@ -22,7 +22,7 @@ class HeroLinks extends React.Component {
         const champions = Object.values(data).map(hero => (
           <Link key={hero.id} to={`/Hero/${hero.id}`}>
             <img
-              src={`http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/${
+              src={`http://ddragon.leagueoflegends.com/cdn/9.6.1/img/champion/${
                 hero.id
               }.png`}
               alt=""

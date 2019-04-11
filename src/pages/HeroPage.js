@@ -9,7 +9,7 @@ class HeroPage extends React.Component {
   };
 
   componentDidMount = () => {
-    const API = `http://ddragon.leagueoflegends.com/cdn/6.24.1/data/en_US/champion/${
+    const API = `http://ddragon.leagueoflegends.com/cdn/9.6.1/data/en_US/champion/${
       this.props.match.params.id
     }.json`;
     fetch(API)
