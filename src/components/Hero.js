@@ -20,6 +20,7 @@ const Hero = ({ data }) => {
           <p className="lore">{txt}</p>
         </div>
       </article>
+      <article className="abilities">Abilities</article>
     </>
   );
 };

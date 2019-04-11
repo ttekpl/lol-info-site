@@ -33,9 +33,6 @@ class HeroPage extends React.Component {
     return (
       <section>
         {this.state.data ? <Hero data={this.state.data} /> : null}
-        <div className="back">
-          <Link to="/Heroes">Back</Link>
-        </div>
       </section>
     );
   };
