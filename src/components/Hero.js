@@ -29,9 +29,9 @@ const Hero = ({ data }) => {
               </a>
             </li>
             <li>
-              <a href="#stats">
+              <a href="#skills">
                 <FaInfo />
-                Stats
+                Skills
               </a>
             </li>
           </ul>
@@ -94,6 +94,76 @@ const Hero = ({ data }) => {
         <div className="story">
           <h1 className="story">Lore of {data[0].name}</h1>
           <p className="story">{lore}</p>
+        </div>
+      </article>
+
+      <article id="skills">
+        <div className="skillsWrap">
+          <div>
+            <h2>Q-{data[0].spells[0].name}</h2>
+            <img
+              src={`http://ddragon.leagueoflegends.com/cdn/9.6.1/img/spell/${
+                data[0].spells[0].id
+              }.png`}
+              alt=""
+            />
+            <p>{data[0].spells[0].description}</p>
+            <h2>1 lvl cost :{data[0].spells[0].cost[0]}</h2>
+            <h2>5 lvl cost :{data[0].spells[0].cost[4]}</h2>
+            <h2>1 lvl cooldown :{data[0].spells[0].cooldown[0]}</h2>
+            <h2>5 lvl cooldown :{data[0].spells[0].cooldown[4]}</h2>
+          </div>
+
+          <div>
+            <h2>W-{data[0].spells[1].name}</h2>
+            <img
+              src={`http://ddragon.leagueoflegends.com/cdn/9.6.1/img/spell/${
+                data[0].spells[1].id
+              }.png`}
+              alt=""
+            />
+            <p>{data[0].spells[1].description}</p>
+            <h2>1 lvl cost :{data[0].spells[1].cost[0]}</h2>
+            <h2>5 lvl cost :{data[0].spells[1].cost[4]}</h2>
+            <h2>1 lvl cooldown :{data[0].spells[1].cooldown[0]}</h2>
+            <h2>5 lvl cooldown :{data[0].spells[1].cooldown[4]}</h2>
+          </div>
+
+          <div>
+            <h2>E-{data[0].spells[2].name}</h2>
+            <img
+              src={`http://ddragon.leagueoflegends.com/cdn/9.6.1/img/spell/${
+                data[0].spells[2].id
+              }.png`}
+              alt=""
+            />
+            <p>{data[0].spells[2].description}</p>
+            <h2>1 lvl cost :{data[0].spells[2].cost[0]}</h2>
+            <h2>5 lvl cost :{data[0].spells[2].cost[4]}</h2>
+            <h2>1 lvl cooldown :{data[0].spells[2].cooldown[0]}</h2>
+            <h2>5 lvl cooldown :{data[0].spells[2].cooldown[4]}</h2>
+          </div>
+
+          <div>
+            <h2>R-{data[0].spells[3].name}</h2>
+            <img
+              src={`http://ddragon.leagueoflegends.com/cdn/9.6.1/img/spell/${
+                data[0].spells[3].id
+              }.png`}
+              alt=""
+            />
+            <p>{data[0].spells[3].description}</p>
+            <h2>1 lvl cost :{data[0].spells[3].cost[0]}</h2>
+            <h2>5 lvl cost :{data[0].spells[3].cost[4]}</h2>
+            <h2>1 lvl cooldown :{data[0].spells[3].cooldown[0]}</h2>
+            <h2>5 lvl cooldown :{data[0].spells[3].cooldown[4]}</h2>
+          </div>
+
+          <div>
+            <h2>Passive-{data[0].passive.name}</h2>
+
+            <p>{data[0].passive.description}</p>
+          </div>
         </div>
       </article>
     </>
