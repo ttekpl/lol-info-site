@@ -6,6 +6,7 @@ import Home from "../pages/Home";
 import HeroPage from "../pages/HeroPage";
 import Menu from "./Menu";
 import HeroLinks from "../pages/HeroLinks";
+import Search from "../pages/Search";
 
 class Page extends React.Component {
   state = {};
@@ -16,7 +17,7 @@ class Page extends React.Component {
         <Menu />
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/Search" />
+          <Route path="/Search" component={Search} />
           <Route path="/Heroes" component={HeroLinks} />
           <Route path="/Hero/:id" component={HeroPage} />
           {/* <Route component={error}></Route> */}

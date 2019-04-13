@@ -1,0 +1,29 @@
+.search {
+  padding: 200px 15vw;
+}
+
+.search form {
+  position: absolute;
+  top: calc(var(--menuHeight) + 20px);
+  height: var(--menuHeight);
+  display: flex;
+  align-items: center;
+  left: 50%;
+  transform: translateX(-60%);
+}
+
+.search input {
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid #90753a;
+  outline: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 20vw;
+  font-size: 25px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.form_h1 {
+  padding-left: 20px;
+}
