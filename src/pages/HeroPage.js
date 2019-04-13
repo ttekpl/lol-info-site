@@ -35,7 +35,6 @@ class HeroPage extends React.Component {
       <section>
         {this.state.data ? (
           <Hero
-            data={this.state.data}
             blurb={data[0].blurb.replace(/(<([^>]+)>)/gi, "")}
             lore={data[0].lore.replace(/(<([^>]+)>)/gi, "")}
             title={data[0].title}
