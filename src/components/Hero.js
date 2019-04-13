@@ -3,7 +3,6 @@ import "../styles/Hero.css";
 import { FaInfo, FaBook, FaChartBar, FaPlay } from "react-icons/fa";
 
 const Hero = ({
-  data,
   blurb,
   lore,
   title,

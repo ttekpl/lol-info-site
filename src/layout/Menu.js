@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../styles/Menu.css";
 
 const Menu = () => {
@@ -7,9 +7,11 @@ const Menu = () => {
     <nav className="mainMenu">
       <div className="strip" />
       <ul>
-        <Link to="/">Home</Link>
-        <Link to="/Search">Search a summoner</Link>
-        <Link to="/Heroes">Champions</Link>
+        <NavLink exact to="/">
+          Home
+        </NavLink>
+        <NavLink to="/Search">Search a summoner</NavLink>
+        <NavLink to="/Heroes">Champions</NavLink>
       </ul>
     </nav>
   );

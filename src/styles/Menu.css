@@ -34,7 +34,9 @@
 .mainMenu a:hover {
   opacity: 0.5;
 }
-
+.mainMenu a.active {
+  text-shadow: 0px 0px 1px black;
+}
 @media (max-width: 1024px) {
   .mainMenu ul {
     width: 80%;

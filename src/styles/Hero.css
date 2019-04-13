@@ -108,7 +108,7 @@ img.splash {
   background-color: white;
   grid-column: 4/6;
   grid-row: 3/4;
-  font-size: 18px;
+  font-size: 22px;
   padding: 20px;
   transform: translate(20%, 20%);
 }
