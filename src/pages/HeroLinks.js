@@ -5,8 +5,7 @@ import "../styles/HeroLinks.css";
 
 class HeroLinks extends React.Component {
   state = {
-    champions: null,
-    routs: null
+    champions: null
   };
 
   componentDidMount = () => {
@@ -42,9 +41,8 @@ class HeroLinks extends React.Component {
     const { champions, routs } = this.state;
     return (
       <section className="heroLinks">
-        Heroes list
+        <h1 className="heroLink_H1">Heroes list</h1>
         <div className="links">{champions ? champions : null}</div>
-        {routs ? routs : null}
       </section>
     );
   };
