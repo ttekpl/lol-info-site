@@ -29,10 +29,27 @@ class HeroPage extends React.Component {
   };
 
   render = () => {
+    const { data } = this.state;
     console.log(this.props);
     return (
       <section>
-        {this.state.data ? <Hero data={this.state.data} /> : null}
+        {this.state.data ? (
+          <Hero
+            data={this.state.data}
+            blurb={data[0].blurb.replace(/(<([^>]+)>)/gi, "")}
+            lore={data[0].lore.replace(/(<([^>]+)>)/gi, "")}
+            title={data[0].title}
+            id={data[0].id}
+            name={data[0].name}
+            attack={data[0].info.attack}
+            defense={data[0].info.defense}
+            magic={data[0].info.magic}
+            difficulty={data[0].info.difficulty}
+            spells={data[0].spells}
+            passiveName={data[0].passive.name}
+            passiveDescription={data[0].passive.description}
+          />
+        ) : null}
       </section>
     );
   };

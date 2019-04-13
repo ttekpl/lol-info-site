@@ -5,7 +5,7 @@ import "../styles/Page.css";
 import Home from "../pages/Home";
 import HeroPage from "../pages/HeroPage";
 import Menu from "./Menu";
-import HeroLinks from "../components/HeroLinks";
+import HeroLinks from "../pages/HeroLinks";
 
 class Page extends React.Component {
   state = {};
