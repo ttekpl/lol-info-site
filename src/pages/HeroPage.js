@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
 import "../styles/Page.css";
+import { Spring } from "react-spring/renderprops";
 
 class HeroPage extends React.Component {
   state = {
@@ -32,26 +33,38 @@ class HeroPage extends React.Component {
     const { data } = this.state;
     console.log(this.props);
     return (
-      <section>
-        {this.state.data ? (
-          <Hero
-            blurb={
-              data[0].blurb.replace(/(<([^>]+)>)/gi, "").slice(0, 180) + "..."
-            }
-            lore={data[0].lore.replace(/(<([^>]+)>)/gi, "")}
-            title={data[0].title}
-            id={data[0].id}
-            name={data[0].name}
-            attack={data[0].info.attack}
-            defense={data[0].info.defense}
-            magic={data[0].info.magic}
-            difficulty={data[0].info.difficulty}
-            spells={data[0].spells}
-            passiveName={data[0].passive.name}
-            passiveDescription={data[0].passive.description}
-          />
-        ) : null}
-      </section>
+      <Spring
+        from={{ opacity: 0 }}
+        to={{ opacity: 1 }}
+        delay={500}
+        config={{ duration: 800 }}
+      >
+        {props => (
+          <div style={props}>
+            <section>
+              {this.state.data ? (
+                <Hero
+                  blurb={
+                    data[0].blurb.replace(/(<([^>]+)>)/gi, "").slice(0, 180) +
+                    "..."
+                  }
+                  lore={data[0].lore.replace(/(<([^>]+)>)/gi, "")}
+                  title={data[0].title}
+                  id={data[0].id}
+                  name={data[0].name}
+                  attack={data[0].info.attack}
+                  defense={data[0].info.defense}
+                  magic={data[0].info.magic}
+                  difficulty={data[0].info.difficulty}
+                  spells={data[0].spells}
+                  passiveName={data[0].passive.name}
+                  passiveDescription={data[0].passive.description}
+                />
+              ) : null}
+            </section>
+          </div>
+        )}
+      </Spring>
     );
   };
 }

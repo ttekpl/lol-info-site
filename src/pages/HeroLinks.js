@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import Hero from "../components/Hero";
 import "../styles/HeroLinks.css";
-import { Spring, Trail, animated } from "react-spring/renderprops";
+import { Spring, Transition } from "react-spring/renderprops";
 
 class HeroLinks extends React.Component {
   state = {
@@ -42,10 +42,7 @@ class HeroLinks extends React.Component {
     console.log(this.props);
     const { champions, routs } = this.state;
     return (
-      <Spring
-        from={{ transform: "translateX(-100%)" }}
-        to={{ transform: "translateX(0%)" }}
-      >
+      <Spring from={{ opacity: 0 }} to={{ opacity: 1 }} delay={500}>
         {props => (
           <div style={props}>
             <section className="heroLinks">
