@@ -17,6 +17,7 @@ class Search extends Component {
   };
 
   render() {
+    console.log(this.props.prevPath);
     return (
       <div className="search">
         <form action="">
