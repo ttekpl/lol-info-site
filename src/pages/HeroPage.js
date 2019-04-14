@@ -9,6 +9,13 @@ class HeroPage extends React.Component {
     hero: ","
   };
 
+  onImgLoad = () => {
+    console.log("loaded");
+    this.setState({
+      show: true
+    });
+  };
+
   componentDidMount = () => {
     const API = `http://ddragon.leagueoflegends.com/cdn/9.6.1/data/en_US/champion/${
       this.props.match.params.id
@@ -31,7 +38,7 @@ class HeroPage extends React.Component {
 
   render = () => {
     const { data } = this.state;
-    console.log(this.props);
+
     return (
       <Spring
         from={{ opacity: 0 }}
@@ -44,6 +51,8 @@ class HeroPage extends React.Component {
             <section>
               {this.state.data ? (
                 <Hero
+                  show={this.state.show}
+                  trigger={this.onImgLoad}
                   blurb={
                     data[0].blurb.replace(/(<([^>]+)>)/gi, "").slice(0, 180) +
                     "..."

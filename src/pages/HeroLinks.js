@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Link } from "react-router-dom";
 import Hero from "../components/Hero";
 import "../styles/HeroLinks.css";
 import { Spring, Transition } from "react-spring/renderprops";
+import { FaShopware } from "react-icons/fa";
 
 class HeroLinks extends React.Component {
   state = {
@@ -41,46 +42,29 @@ class HeroLinks extends React.Component {
   render = () => {
     console.log(this.props);
     const { champions, routs } = this.state;
+    const show = this.props.path === "/Heroes";
     return (
-      <Spring from={{ opacity: 0 }} to={{ opacity: 1 }} delay={500}>
-        {props => (
-          <div style={props}>
-            <section className="heroLinks">
-              <h1 className="heroLink_H1">Heroes list</h1>
-              <div className="links">{champions ? champions : null}</div>
-            </section>
-          </div>
-        )}
-      </Spring>
+      <Transition
+        items={FaShopware}
+        from={{ opacity: 0 }}
+        to={{ opacity: 1 }}
+        enter={{ opacity: 1 }}
+        leave={{ opacity: 0 }}
+      >
+        {show =>
+          show &&
+          (props => (
+            <div style={props}>
+              <section className="heroLinks">
+                <h1 className="heroLink_H1">Heroes list</h1>
+                <div className="links">{champions ? champions : null}</div>
+              </section>
+            </div>
+          ))
+        }
+      </Transition>
     );
   };
 }
 
 export default HeroLinks;
-
-//  <div
-//         style={{
-//           backgroundColor: '#247BA0',
-//           position: 'relative',
-//           width: '100%',
-//           height: '100%',
-//         }}>
-//         <Trail
-//           native
-//           reverse={toggle}
-//           initial={null}
-//           items={items}
-//           from={{ opacity: 0, x: -100 }}
-//           to={{ opacity: toggle ? 1 : 0.25, x: toggle ? 0 : 100 }}>
-//           {item => ({ x, opacity }) => (
-//             <animated.div
-//               className="box"
-//               onClick={this.toggle}
-//               style={{
-//                 opacity,
-//                 transform: x.interpolate(x => `translate3d(${x}%,0,0)`),
-//               }}
-//             />
-//           )}
-//         </Trail>
-//       </div>
