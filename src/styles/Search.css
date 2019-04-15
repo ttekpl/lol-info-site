@@ -1,21 +1,27 @@
 .search {
-  padding: 200px 15vw;
+  padding: 100px 15vw;
 }
 
 .search form {
-  position: absolute;
   top: calc(var(--menuHeight) + 20px);
   height: var(--menuHeight);
   display: flex;
   align-items: center;
-  left: 50%;
-  transform: translateX(-60%);
+  justify-content: center;
+  width: 100%;
+}
+.search svg {
+  height: var(--menuHeight);
+  color: white;
+  font-size: 30px;
 }
 
 .search input {
+  margin-right: 20px;
   height: 40px;
-  border-radius: 20px;
-  border: 1px solid #90753a;
+  border: none;
+  border-bottom: 1px solid white;
+  background-color: #ddd;
   outline: none;
   padding-left: 20px;
   padding-right: 20px;

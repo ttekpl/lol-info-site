@@ -67,7 +67,10 @@ class HeroPage extends React.Component {
                   difficulty={data[0].info.difficulty}
                   spells={data[0].spells}
                   passiveName={data[0].passive.name}
-                  passiveDescription={data[0].passive.description}
+                  passiveDescription={data[0].passive.description.replace(
+                    /(<([^>]+)>)/gi,
+                    ""
+                  )}
                 />
               ) : null}
             </section>
