@@ -3,7 +3,8 @@
     border: 2px solid white;
     margin-top: 50px;
     position: relative;
-    border-radius: 5px;
+    border-radius: 10px;
+    background-color: #ccc;
   }
 
   .playerName {
@@ -12,7 +13,9 @@
     line-height: 100px;
     padding: 0;
     text-align: center;
-    background-color: #ccc;
+    background-color: #aaa;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
   }
 
   .player img {

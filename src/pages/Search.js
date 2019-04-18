@@ -25,7 +25,7 @@ class Search extends Component {
 
   onSubmit = e => {
     e.preventDefault();
-    const KEY = "RGAPI-a68d7a68-c7e5-4c72-9e90-fe4a83451410";
+    const KEY = "RGAPI-5ddb1ef5-dc55-4bb0-b164-a3a9611d85fb";
     const proxyurl = "https://cors-anywhere.herokuapp.com/";
     const url = `https://eun1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${
       this.state.value
@@ -59,15 +59,28 @@ class Search extends Component {
             });
             console.log("working");
           })
-          .catch(() =>
+          .catch(() => {
             console.log(
               "Can’t access " + url + " response. Blocked by browser?"
-            )
-          );
+            );
+            this.setState({
+              tier: "nothing founded",
+              rank: "nothing founded",
+              score: "nothing founded",
+              leagueName: "nothing founded"
+            });
+          });
       })
-      .catch(() =>
-        console.log("Can’t access " + url + " response. Blocked by browser?")
-      );
+      .catch(() => {
+        console.log("Can’t access " + url + " response. Blocked by browser?");
+
+        this.setState({
+          lvl: "nothing founded",
+          score: "nothing founded",
+          name: "nothing founded",
+          id: "nothing founded"
+        });
+      });
   };
 
   render() {
@@ -76,6 +89,7 @@ class Search extends Component {
         {props => (
           <div style={props}>
             <div className="search">
+              <h1 className="form_h1">Search for a player</h1>
               <form onSubmit={this.onSubmit}>
                 <input
                   type="text"
@@ -84,9 +98,8 @@ class Search extends Component {
                   onSubmit={this.onSubmit}
                 />
                 <FaSearch />
-                <h1 className="form_h1">Search for a player</h1>
               </form>
-              {this.state.tier ? (
+              {this.state.lvl ? (
                 <Player
                   lvl={this.state.lvl}
                   name={this.state.name}

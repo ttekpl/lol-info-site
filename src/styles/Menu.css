@@ -5,11 +5,11 @@
   width: 100%;
   height: 60px;
   background-color: white;
-  z-index: 3;
+  z-index: 6;
   padding-top: 10px;
 }
 .mainMenu ul {
-  width: 50%;
+  width: 100%;
   position: absolute;
   right: 0;
   display: flex;
@@ -28,7 +28,7 @@
 }
 
 .mainMenu a {
-  font-size: 16px;
+  font-size: 10px;
   transition: 0.2s;
 }
 .mainMenu a:hover {
@@ -37,10 +37,48 @@
 .mainMenu a.active {
   text-shadow: 0px 0px 1px black;
 }
-@media (max-width: 1024px) {
-  .mainMenu ul {
-    width: 80%;
+@media (min-width: 1024px) {
+  .mainMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    z-index: 6;
+    padding-top: 10px;
   }
+  .mainMenu ul {
+    width: 100%;
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    line-height: 50px;
+    list-style: none;
+  }
+
+  .strip {
+    position: absolute;
+    top: 0;
+    height: 10px;
+    width: 100%;
+    left: 0;
+    background: linear-gradient(to right, #3c7974, #f4de93);
+    z-index: 6;
+  }
+
+  .mainMenu a {
+    font-size: 16px;
+    transition: 0.2s;
+  }
+  .mainMenu a:hover {
+    opacity: 0.5;
+  }
+  .mainMenu a.active {
+    text-shadow: 0px 0px 1px black;
+  }
+
   .mainMenu a {
     font-size: 14px;
   }

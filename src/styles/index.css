@@ -21,5 +21,11 @@ a {
 }
 
 section {
-  padding-top: 100px;
+  padding-top: 60px;
+}
+
+@media (min-width: 1024px) {
+  section {
+    padding-top: 100px;
+  }
 }

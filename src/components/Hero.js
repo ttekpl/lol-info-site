@@ -86,7 +86,7 @@ const Hero = ({
                 <div
                   className="bar"
                   style={{
-                    width: `calc( ${attack} * 7vw)`
+                    width: `calc( ${attack} * 6vw)`
                   }}
                 >
                   attack: {attack}
@@ -95,7 +95,7 @@ const Hero = ({
                 <div
                   className="bar"
                   style={{
-                    width: `calc( ${defense} * 7vw)`
+                    width: `calc( ${defense} * 6vw)`
                   }}
                 >
                   defense: {defense}
@@ -104,7 +104,7 @@ const Hero = ({
                 <div
                   className="bar"
                   style={{
-                    width: `calc( ${magic} * 7vw)`
+                    width: `calc( ${magic} * 6vw)`
                   }}
                 >
                   magic: {magic}
@@ -113,7 +113,7 @@ const Hero = ({
                 <div
                   className="bar"
                   style={{
-                    width: `calc( ${difficulty} * 7vw)`
+                    width: `calc( ${difficulty} * 6vw)`
                   }}
                 >
                   difficulty: {difficulty}

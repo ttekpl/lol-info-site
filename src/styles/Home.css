@@ -1,0 +1,29 @@
+/* DESKTOP */
+@media (min-width: 1024px) {
+  .homePage {
+    padding: 80px 15vw 0;
+    margin: 0;
+  }
+
+  .homePage article {
+    background-color: white;
+    border-radius: 5px;
+    padding: 0;
+    padding: 50px;
+    height: calc(100vh - 140px);
+  }
+
+  .homeTitle {
+    padding: 50px;
+    margin: 0;
+    text-align: center;
+    font-size: 45px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .homeDescription {
+    padding: 30px;
+    font-size: 30px;
+    text-align: justify;
+  }
+}

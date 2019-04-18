@@ -4,6 +4,7 @@
 
 .heroLink_H1 {
   text-align: center;
+  font-size: 40px;
 }
 
 .links {
@@ -12,9 +13,11 @@
   /* grid-auto-columns: minmax(100px, auto); */
   grid-gap: 40px;
   grid-auto-rows: minmax(50px, auto);
-  background-color: #eeeeee;
+  /* background-color: #eeeeee; */
+  background-color: white;
   padding: 40px;
-  border: 1px solid #90753a;
+  border: 2px solid #90753a;
+  border-radius: 10px;
 }
 
 .links a {
@@ -41,6 +44,8 @@
   height: 100%;
   transition: opacity 0.2s;
   opacity: 1;
+  border: 2px solid #90753a;
+  border-radius: 5px;
 }
 
 .links a:hover img {
