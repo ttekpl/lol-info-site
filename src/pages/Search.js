@@ -25,7 +25,7 @@ class Search extends Component {
 
   onSubmit = e => {
     e.preventDefault();
-    const KEY = "RGAPI-5ddb1ef5-dc55-4bb0-b164-a3a9611d85fb";
+    const KEY = "RGAPI-3cfe99f3-4078-42ce-bb9e-e07c2b2ccefe";
     const proxyurl = "https://cors-anywhere.herokuapp.com/";
     const url = `https://eun1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${
       this.state.value
@@ -96,8 +96,11 @@ class Search extends Component {
                   value={this.state.value}
                   onChange={this.onChange}
                   onSubmit={this.onSubmit}
+                  placeholder="type here"
                 />
-                <FaSearch />
+                <button onClick={this.onSubmit} className="form__button">
+                  Search
+                </button>
               </form>
               {this.state.lvl ? (
                 <Player

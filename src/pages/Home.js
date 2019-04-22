@@ -3,14 +3,14 @@ import "../styles/Home.css";
 
 const Home = () => {
   return (
-    <section className="homePage">
-      <article>
-        <h1 className="homeTitle">Hello on the main page!</h1>
-        <p className="homeDescription">
-          On this site you can search for data about player and champions in
+    <section className="home">
+      <h1 className="home__title">Hello on the main page!</h1>
+      <article className="home__article">
+        <p className="home__description">
+          On this site you can search for data about players and champions in
           League of legends.
         </p>
-        <p className="homeDescription">
+        <p className="home__description  home__description--mute">
           Note: The search supports only eune server. Work in progress.
         </p>
       </article>

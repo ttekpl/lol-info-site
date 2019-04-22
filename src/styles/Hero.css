@@ -48,6 +48,7 @@
   justify-content: center;
   height: 100%;
   list-style: none;
+  background-color: #ddd;
 }
 
 .heroMenu a {
@@ -124,11 +125,11 @@
 article {
   padding: 0;
   position: relative;
+  background-color: #ddd;
 }
 
 .overview {
   height: 100vh;
-  overflow: hidden;
 }
 .title {
   position: absolute;
@@ -184,7 +185,7 @@ img.splash {
 
 @media (min-width: 1024px) {
   article {
-    padding: 160px 15vw 20px;
+    padding: 160px 15vw;
     position: static;
   }
   .overview {

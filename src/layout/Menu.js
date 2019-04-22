@@ -5,12 +5,12 @@ import "../styles/Menu.css";
 const Menu = () => {
   return (
     <nav className="mainMenu">
-      <div className="strip" />
+      <div className="menu__logo">lol info</div>
       <ul>
         <NavLink exact to="/">
           Home
         </NavLink>
-        <NavLink to="/Search">Search a summoner</NavLink>
+        <NavLink to="/Search">Search</NavLink>
         <NavLink to="/Heroes">Champions</NavLink>
       </ul>
     </nav>

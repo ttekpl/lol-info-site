@@ -1,85 +1,98 @@
+:root {
+  --menuHeight: 100px;
+}
+
 .mainMenu {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 60px;
-  background-color: white;
+  height: var(--menuHeight);
   z-index: 6;
-  padding-top: 10px;
+  /* box-shadow: 0 0px 5px 0px; */
+  background-color: #0984e3;
+  display: flex;
 }
 .mainMenu ul {
   width: 100%;
+  height: 100%;
   position: absolute;
   right: 0;
   display: flex;
   justify-content: space-around;
-  line-height: 50px;
+  line-height: 80px;
   list-style: none;
-}
-
-.strip {
-  position: absolute;
-  top: 0;
-  height: 10px;
-  width: 100%;
-  left: 0;
-  background: linear-gradient(to right, #3c7974, #f4de93);
+  align-items: center;
 }
 
 .mainMenu a {
   font-size: 10px;
   transition: 0.2s;
 }
-.mainMenu a:hover {
-  opacity: 0.5;
-}
+
 .mainMenu a.active {
   text-shadow: 0px 0px 1px black;
 }
 @media (min-width: 1024px) {
-  .mainMenu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    background-color: white;
-    z-index: 6;
-    padding-top: 10px;
+  .menu__logo {
+    width: 20%;
+    padding-left: 20px;
+    text-transform: uppercase;
+    font-size: 30px;
+    line-height: var(--menuHeight);
+    font-weight: bold;
+    letter-spacing: 2px;
   }
+
   .mainMenu ul {
-    width: 100%;
-    position: absolute;
-    right: 0;
+    width: 80%;
     display: flex;
     justify-content: space-around;
-    line-height: 50px;
     list-style: none;
-  }
-
-  .strip {
-    position: absolute;
-    top: 0;
-    height: 10px;
-    width: 100%;
-    left: 0;
-    background: linear-gradient(to right, #3c7974, #f4de93);
-    z-index: 6;
+    align-items: center;
   }
 
   .mainMenu a {
-    font-size: 16px;
+    font-size: 20px;
+    /* border: 3px solid black; */
+    /* box-shadow: 0 0 0 3px black; */
+    width: 20%;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
     transition: 0.2s;
-  }
-  .mainMenu a:hover {
-    opacity: 0.5;
-  }
-  .mainMenu a.active {
-    text-shadow: 0px 0px 1px black;
+    text-align: center;
+    z-index: 6;
+    color: black;
   }
 
-  .mainMenu a {
-    font-size: 14px;
+  .mainMenu a::after {
+    display: block;
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    right: 10px;
+    top: 10px;
+    z-index: -2;
   }
+
+  .mainMenu a::before {
+    display: block;
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    border: 2px solid black;
+    z-index: -1;
+    box-sizing: border-box;
+  }
+
+  /* .mainMenu a.active {
+    text-shadow: 0px 0px 1px black;
+  } */
 }
