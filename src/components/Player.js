@@ -19,17 +19,27 @@ const Player = ({
       {props => (
         <div style={props}>
           <div className="player">
-            <h1 className="playerName">{name}</h1>
-            <img
-              src={`http://ddragon.leagueoflegends.com/cdn/9.6.1/img/profileicon/${icon}.png`}
-              alt="Player icon"
-              onLoad={trigger}
-            />
-            <h2>LVL: {lvl}</h2>
-            <h2>Tier: {tier}</h2>
-            <h2>League: {rank}</h2>
-            <h2>Score: {score}</h2>
-            <h2>League name: {leagueName}</h2>
+            <h1 className="player__name">{name}</h1>
+            <div className="data">
+              <div
+                className="data__img"
+                style={{
+                  backgroundImage: `url(http://ddragon.leagueoflegends.com/cdn/9.6.1/img/profileicon/${icon}.png)`
+                }}
+              />
+              {/* <img
+                src={`http://ddragon.leagueoflegends.com/cdn/9.6.1/img/profileicon/${icon}.png`}
+                alt="Player icon"
+                onLoad={trigger}
+              /> */}
+              <div className="info">
+                <h2>LVL: {lvl}</h2>
+                <h2>Tier: {tier}</h2>
+                <h2>League: {rank}</h2>
+                <h2>Score: {score}</h2>
+                <h2>League name: {leagueName}</h2>
+              </div>
+            </div>
           </div>
         </div>
       )}

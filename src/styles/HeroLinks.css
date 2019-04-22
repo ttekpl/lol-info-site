@@ -1,66 +1,68 @@
-.heroLinks {
-  padding: 5vw 10vw;
-  background-color: #ddd;
-}
-
-.heroLink_H1 {
-  text-align: center;
-  font-size: 40px;
-}
-
-.links {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  /* grid-auto-columns: minmax(100px, auto); */
-  grid-gap: 40px;
-  grid-auto-rows: minmax(50px, auto);
-  /* background-color: #eeeeee; */
-  background-color: white;
-  padding: 40px;
-  border: 2px solid #90753a;
-  border-radius: 10px;
-}
-
-.links a {
-  background-position: center;
-  background-size: cover;
-  border-radius: 5px;
-  color: black;
-  text-decoration: none;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-.links a p {
-  position: absolute;
-  bottom: 0;
-  transform: translateY(100%);
-  font-size: 12px;
-  letter-spacing: 1px;
-}
-.links a img {
-  width: 100%;
-  height: 100%;
-  transition: opacity 0.2s;
-  opacity: 1;
-  border: 2px solid #90753a;
-  border-radius: 5px;
-}
-
-.links a:hover img {
-  opacity: 0.5;
-}
-
-@media (max-width: 1360px) {
-  .links {
-    grid-template-columns: repeat(8, 1fr);
+@media (min-width: 1024px) {
+  .heroLinks {
+    padding: 5vw 10vw;
+    background-color: #ddd;
   }
-}
 
-@media (max-width: 1024px) {
-  .links {
-    grid-template-columns: repeat(6, 1fr);
+  .heroLink_H1 {
+    text-align: center;
+    font-size: 40px;
   }
+
+  .links {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* grid-auto-columns: minmax(100px, auto); */
+    grid-gap: 40px;
+    grid-auto-rows: minmax(50px, auto);
+    /* background-color: #eeeeee; */
+    background-color: white;
+    padding: 40px;
+    border: 2px solid #90753a;
+    border-radius: 10px;
+  }
+
+  .links a {
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .links a p {
+    position: absolute;
+    bottom: 0;
+    transform: translateY(100%);
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  .links a img {
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.2s;
+    opacity: 1;
+    border: 2px solid #90753a;
+    border-radius: 5px;
+  }
+
+  .links a:hover img {
+    opacity: 0.5;
+  }
+
+  /* @media (max-width: 1360px) {
+    .links {
+      grid-template-columns: repeat(8, 1fr);
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .links {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  } */
 }

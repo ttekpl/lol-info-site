@@ -7,7 +7,7 @@ import Player from "../components/Player";
 class Search extends Component {
   state = {
     value: "",
-    loaded: false
+    loaded: true
   };
 
   onImgLoad = () => {
@@ -89,8 +89,8 @@ class Search extends Component {
         {props => (
           <div style={props}>
             <div className="search">
-              <h1 className="form_h1">Search for a player</h1>
-              <form onSubmit={this.onSubmit}>
+              <form onSubmit={this.onSubmit} className="search__form">
+                <h1 className="form__h1">Search for a player</h1>
                 <input
                   type="text"
                   value={this.state.value}
@@ -115,7 +115,9 @@ class Search extends Component {
                   trigger={this.onImgLoad}
                   show={this.state.loaded}
                 />
-              ) : null}
+              ) : (
+                <h1 className="search__instruction">Data will appear here</h1>
+              )}
             </div>
           </div>
         )}
