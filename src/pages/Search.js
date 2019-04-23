@@ -33,7 +33,14 @@ class Search extends Component {
 `;
     // site that doesn’t send Access-Control-*
     fetch(proxyurl + url) // https://cors-anywhere.herokuapp.com/https://example.com
-      .then(response => response.json())
+      .then(response => {
+        console.log(response.status);
+        if (response.status === 200) {
+          return response.json();
+        } else {
+          throw new Error("error");
+        }
+      })
       .then(data => {
         console.log(data);
         this.setState({
@@ -102,7 +109,7 @@ class Search extends Component {
                   Search
                 </button>
               </form>
-              {this.state.lvl ? (
+              {this.state.lvl !== "nothing founded" && this.state.lvl ? (
                 <Player
                   lvl={this.state.lvl}
                   name={this.state.name}
@@ -115,6 +122,10 @@ class Search extends Component {
                   trigger={this.onImgLoad}
                   show={this.state.loaded}
                 />
+              ) : this.state.name === "nothing founded" ? (
+                <h1 className="search__instruction">
+                  We did not find data for such a player!
+                </h1>
               ) : (
                 <h1 className="search__instruction">Data will appear here</h1>
               )}

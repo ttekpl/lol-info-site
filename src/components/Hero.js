@@ -123,12 +123,13 @@ const Hero = ({
 
             <article id="story">
               <div className="story">
-                <h1 className="story">Lore of {name}</h1>
+                <h1 className="story__title">Lore of {name}</h1>
                 <p className="story">{lore}</p>
               </div>
             </article>
 
             <article id="skills">
+              <h1 className="skills__title">Skills</h1>
               <div className="skillsWrap">
                 <div>
                   <h2>Q-{spells[0].name}</h2>

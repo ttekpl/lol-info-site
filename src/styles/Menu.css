@@ -12,6 +12,8 @@
   /* box-shadow: 0 0px 5px 0px; */
   background-color: #0984e3;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .mainMenu ul {
   width: 100%;
@@ -35,13 +37,15 @@
 }
 @media (min-width: 1024px) {
   .menu__logo {
-    width: 20%;
+    width: 15%;
+    height: 60px;
+    line-height: 60px;
     padding-left: 20px;
     text-transform: uppercase;
     font-size: 30px;
-    line-height: var(--menuHeight);
     font-weight: bold;
     letter-spacing: 2px;
+    background-color: white;
   }
 
   .mainMenu ul {
@@ -64,6 +68,8 @@
     text-align: center;
     z-index: 6;
     color: black;
+    transition: 0.2s;
+    font-weight: normal;
   }
 
   .mainMenu a::after {
@@ -75,7 +81,8 @@
     background-color: white;
     right: 10px;
     top: 10px;
-    z-index: -2;
+    z-index: -3;
+    transition: 0.2s;
   }
 
   .mainMenu a::before {
@@ -87,12 +94,17 @@
     background-color: transparent;
     top: 0;
     left: 0;
-    border: 2px solid black;
-    z-index: -1;
+    border: 1px solid black;
+    z-index: -2;
     box-sizing: border-box;
+    transition: 0.2s;
   }
 
-  /* .mainMenu a.active {
-    text-shadow: 0px 0px 1px black;
-  } */
+  .mainMenu a:hover {
+    opacity: 0.5;
+  }
+
+  .mainMenu a.active {
+    /* font-weight: bold; */
+  }
 }

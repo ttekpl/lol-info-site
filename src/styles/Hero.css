@@ -36,9 +36,9 @@
 
 .heroMenu {
   position: absolute;
-  top: 0px;
+  top: var(--menuHeight);
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100px;
   border: 1px solid white;
   z-index: 4;
@@ -65,17 +65,11 @@
 }
 
 .heroMenu:hover a {
-  color: #62acb5;
+  color: #0984e3;
 }
 
 @media (min-width: 1024px) {
   .heroMenu {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    border: 1px solid white;
   }
   .heroMenu ul {
     display: flex;
@@ -96,10 +90,6 @@
     padding: 20px;
     color: white;
     transition: 0.3s;
-  }
-
-  .heroMenu:hover a {
-    color: #62acb5;
   }
 }
 
@@ -129,7 +119,8 @@ article {
 }
 
 .overview {
-  height: 100vh;
+  height: 120vh;
+  min-height: 600px;
 }
 .title {
   position: absolute;
@@ -185,11 +176,12 @@ img.splash {
 
 @media (min-width: 1024px) {
   article {
-    padding: 160px 15vw;
+    padding: 120px 15vw;
     position: static;
   }
+
   .overview {
-    max-height: 100vw;
+    padding-top: 220px;
   }
 
   div.wrapOverview {
@@ -295,23 +287,26 @@ img.splash {
 /* ----------------------------------------------------------------------------- */
 
 h1.role {
-  font-size: 30px;
+  font-size: 60px;
   text-align: center;
+  color: white;
+  font-weight: bold;
+  padding: 50px 0;
 }
 
 .wrapRoles {
   display: flex;
   flex-direction: column;
   height: 50vh;
+  min-height: 300px;
   background-color: white;
   justify-content: space-around;
   padding: 20px;
-  border: 1px solid #90753a;
 }
 
 .bar {
   text-transform: uppercase;
-  background-color: #3a7875;
+  background-color: #0984e3;
   height: 50px;
   color: white;
   line-height: 50px;
@@ -319,7 +314,6 @@ h1.role {
   text-align: center;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
-  border: 2px solid #90753a;
   min-width: 200px;
 }
 
@@ -330,12 +324,13 @@ div.story {
   background-color: white;
   box-shadow: -40px -40px #ccc;
   padding: 20px;
-  border: 1px solid #90753a;
 }
 
-h1 {
+.story__title {
   padding: 50px 0;
-  font-size: 30px;
+  color: #ddd;
+  font-weight: bold;
+  font-size: 60px;
 }
 
 p.story {
@@ -348,8 +343,16 @@ p.story {
 /* Skills Section */
 /* ----------------------------------------------------------------------------- */
 
-article:nth-child(4) {
+/* article:nth-child(4) {
   padding-bottom: 100px;
+} */
+
+.skills__title {
+  font-size: 60px;
+  font-weight: bold;
+  color: white;
+  padding: 50px 0;
+  text-align: center;
 }
 
 .skillsWrap {
@@ -359,8 +362,7 @@ article:nth-child(4) {
 }
 
 .skillsWrap div {
-  border: 1px solid #90753a;
-  border-radius: 10px;
+  border: 2px solid #0984e3;
   padding: 20px;
   background-color: white;
 }
@@ -391,8 +393,6 @@ article:nth-child(4) {
   }
 
   .skillsWrap div {
-    border: 1px solid #90753a;
-    border-radius: 10px;
     padding: 20px;
     background-color: white;
   }
