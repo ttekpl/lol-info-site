@@ -56,7 +56,7 @@ class HeroLinks extends React.Component {
           (props => (
             <div style={props}>
               <section className="heroLinks">
-                <h1 className="heroLink_H1">Heroes list</h1>
+                <h1 className="heroLink__title">Heroes list</h1>
                 <div className="links">{champions ? champions : null}</div>
               </section>
             </div>

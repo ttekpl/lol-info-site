@@ -28,7 +28,7 @@
 }
 
 .home__description {
-  font-size: 40px;
+  font-size: 25px;
   font-weight: bold;
   text-align: justify;
   padding: 20px 0;
@@ -36,6 +36,15 @@
 
 .home__description--mute {
   font-size: 20px;
+}
+
+@media (min-width: 660px) {
+  .home__description {
+    font-size: 35px;
+  }
+  .home__description--mute {
+    font-size: 25px;
+  }
 }
 
 /* DESKTOP */
@@ -77,6 +86,6 @@
   }
 
   .home__description--mute {
-    font-size: 20px;
+    font-size: 25px;
   }
 }
