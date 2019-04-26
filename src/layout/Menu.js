@@ -4,22 +4,27 @@ import "../styles/Menu.css";
 import { FaBars } from "react-icons/fa";
 
 const Menu = props => {
+  console.log(props.isShort);
   return (
     <>
       <FaBars className="bars" onClick={props.toggle} />
       <nav
-        className="mainMenu"
+        className={`mainMenu ${props.isShort ? "shorter" : ""}`}
         style={{
           transform: `translateX(${props.isMenuVisible ? "0%" : "-100%"})`
         }}
       >
         <div className="menu__logo">lol info</div>
         <ul>
-          <NavLink exact to="/">
+          <NavLink onClick={props.onMenuItemClick} exact to="/">
             Home
           </NavLink>
-          <NavLink to="/Search">Search</NavLink>
-          <NavLink to="/Heroes">Champions</NavLink>
+          <NavLink onClick={props.onMenuItemClick} to="/Search">
+            Search
+          </NavLink>
+          <NavLink onClick={props.onMenuItemClick} to="/Heroes">
+            Champions
+          </NavLink>
         </ul>
       </nav>
     </>

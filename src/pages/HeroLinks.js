@@ -11,6 +11,11 @@ class HeroLinks extends React.Component {
   };
 
   componentDidMount = () => {
+    this.props.del();
+    // if (!this.props.isShort) {
+    //   this.props.set();
+    //   console.log("-------------------", this.props.set);
+    // }
     const API = `http://ddragon.leagueoflegends.com/cdn/9.6.1/data/en_US/champion.json 
       `;
     fetch(API)
@@ -39,30 +44,34 @@ class HeroLinks extends React.Component {
       .catch(error => console.log(error));
   };
 
+  // componentWillUnmount() {
+  //   console.log(this.props.isShort);
+  //   if (this.props.isShort) this.props.del();
+  // }
+
+  // componentWillMount() {
+  //   console.log(this.props.isShort);
+  //   if (this.props.isShort) this.props.set();
+  // }
+
   render = () => {
     console.log(this.props);
     const { champions, routs } = this.state;
-    const show = this.props.path === "/Heroes";
+
     return (
-      <Transition
-        items={FaShopware}
-        from={{ opacity: 0 }}
+      <Spring
+        from={{ opacity: this.props.isMenuVisible === null ? 0 : 1 }}
         to={{ opacity: 1 }}
-        enter={{ opacity: 1 }}
-        leave={{ opacity: 0 }}
       >
-        {show =>
-          show &&
-          (props => (
-            <div style={props}>
-              <section className="heroLinks">
-                <h1 className="heroLink__title">Heroes list</h1>
-                <div className="links">{champions ? champions : null}</div>
-              </section>
-            </div>
-          ))
-        }
-      </Transition>
+        {props => (
+          <div style={props}>
+            <section className="heroLinks">
+              <h1 className="heroLink__title">Heroes list</h1>
+              <div className="links">{champions ? champions : null}</div>
+            </section>
+          </div>
+        )}
+      </Spring>
     );
   };
 }

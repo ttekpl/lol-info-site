@@ -8,7 +8,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 3;
+  z-index: 999;
 }
 .lds-dual-ring:after {
   content: " ";
@@ -17,8 +17,8 @@
   height: 46px;
   margin: 1px;
   border-radius: 50%;
-  border: 5px solid #ddd;
-  border-color: #ddd transparent #ddd transparent;
+  border: 5px solid #0984e3;
+  border-color: #0984e3 transparent #0984e3 transparent;
   animation: lds-dual-ring 1.2s linear infinite;
 }
 @keyframes lds-dual-ring {
@@ -104,6 +104,10 @@
 .heroMenu:hover li:nth-child(4) a {
   color: #c91d1d;
 } */
+.HeroWrap {
+  min-height: 101vh;
+  background-color: #ddd;
+}
 
 .heroMenu a:hover {
   background-color: white;
@@ -121,6 +125,7 @@ article {
 .overview {
   height: 120vh;
   min-height: 600px;
+  background-color: #ddd;
 }
 .title {
   position: absolute;

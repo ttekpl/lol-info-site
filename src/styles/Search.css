@@ -73,13 +73,9 @@
 /* Desktop */
 @media (min-width: 1024px) {
   .search__instruction {
-    position: absolute;
     left: 30%;
     width: 70%;
     padding: 0 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: calc(100vh - var(--menuHeight));
     top: 0;
     min-height: unset;
@@ -97,24 +93,12 @@
     left: 0;
     width: 30%;
     height: calc(100vh - var(--menuHeight));
-    background-color: #ddd;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 2px 0 10px -4px #333;
     min-height: unset;
   }
 
   .form__button {
     width: 200px;
     height: 60px;
-    background-color: white;
-    border: 2px solid #0984e3;
-    box-shadow: -10px 10px white;
-    font-size: 25px;
-    cursor: pointer;
-    transition: 0.2s;
-    color: #0984e3;
   }
 
   .form__button:hover {
@@ -124,22 +108,14 @@
   .search input {
     margin: 50px;
     height: 40px;
-    border: none;
-    border-bottom: 3px solid white;
-    background-color: #ddd;
-    outline: none;
     padding-left: 20px;
     padding-right: 20px;
     width: 20vw;
     font-size: 25px;
-    font-family: "Montserrat", sans-serif;
   }
 
   .form__h1 {
     padding: 50px 0;
     font-size: 40px;
-    text-align: center;
-    font-weight: bold;
-    color: white;
   }
 }

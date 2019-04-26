@@ -10,6 +10,15 @@ class Search extends Component {
     loaded: true
   };
 
+  componentDidMount() {
+    if (!this.props.isShort) {
+      this.props.set();
+    }
+  }
+  componentWillUnmount() {
+    if (this.props.isShort) this.props.del();
+  }
+
   onImgLoad = () => {
     console.log("loadedddd");
     this.setState({
@@ -92,7 +101,10 @@ class Search extends Component {
 
   render() {
     return (
-      <Spring from={{ opacity: 0 }} to={{ opacity: 1 }}>
+      <Spring
+        from={{ opacity: this.props.isMenuVisible === null ? 0 : 1 }}
+        to={{ opacity: 1 }}
+      >
         {props => (
           <div style={props}>
             <div className="search">

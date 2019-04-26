@@ -1,5 +1,12 @@
 import React from "react";
-import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
+import {
+  BrowserRouter,
+  Route,
+  Link,
+  Switch,
+  withRoute
+} from "react-router-dom";
+
 import Hero from "../components/Hero";
 import "../styles/Page.css";
 import Home from "../pages/Home";
@@ -11,14 +18,13 @@ import { FaCommentsDollar } from "react-icons/fa";
 
 class Page extends React.Component {
   state = {
-    isMenuVisible: false
+    isMenuVisible: null,
+    shorter: false
   };
 
-  // componentDidUpdate(nextProps) {
-  //   if (nextProps.location !== this.props.location) {
-  //     this.setState({ prevPath: this.props.location });
-  //   }
-  // }
+  onMenuItemClick = () => {
+    this.setState({ isMenuVisible: null });
+  };
 
   toggleMenu = () => {
     this.setState(prev => ({
@@ -26,13 +32,26 @@ class Page extends React.Component {
     }));
   };
 
+  setShort = () => {
+    this.setState(prev => ({
+      shorter: true
+    }));
+  };
+
+  delShort = () => {
+    this.setState(prev => ({
+      shorter: false
+    }));
+  };
+
   render = () => {
-    console.log(this.props);
     return (
       <>
         <Menu
           toggle={this.toggleMenu}
           isMenuVisible={this.state.isMenuVisible}
+          isShort={this.state.shorter}
+          onMenuItemClick={this.onMenuItemClick}
         />
         <main
           style={{
@@ -41,17 +60,51 @@ class Page extends React.Component {
           onClick={this.state.isMenuVisible ? this.toggleMenu : null}
         >
           <Switch>
-            <Route path="/" exact component={Home} />
             <Route
-              path="/Search"
-              component={() => (
-                <Search
-                  prevPath={this.state.prevPath ? this.state.prevPath : null}
+              path="/"
+              exact
+              render={props => (
+                <Home
+                  {...props}
+                  set={this.setShort}
+                  del={this.delShort}
+                  isShort={this.state.shorter}
+                  isMenuVisible={this.state.isMenuVisible}
                 />
               )}
             />
-            <Route path="/Heroes" component={HeroLinks} />
-            <Route path="/Hero/:id" component={HeroPage} />
+            <Route
+              path="/Search"
+              render={props => (
+                <Search
+                  {...props}
+                  set={this.setShort}
+                  del={this.delShort}
+                  isShort={this.state.shorter}
+                  isMenuVisible={this.state.isMenuVisible}
+                />
+              )}
+            />
+            <Route
+              path="/Heroes"
+              render={props => (
+                <HeroLinks
+                  {...props}
+                  isMenuVisible={this.state.isMenuVisible}
+                  del={this.delShort}
+                />
+              )}
+            />
+            <Route
+              path="/Hero/:id"
+              render={props => (
+                <HeroPage
+                  {...props}
+                  isMenuVisible={this.state.isMenuVisible}
+                  del={this.delShort}
+                />
+              )}
+            />
             {/* <Route component={error}></Route> */}
           </Switch>
         </main>

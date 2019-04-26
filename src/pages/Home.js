@@ -1,10 +1,17 @@
 import React from "react";
 import "../styles/Home.css";
-import { Spring } from "react-spring/renderprops";
+import { Spring, Transition } from "react-spring/renderprops";
 
-const Home = () => {
-  return (
-    <Spring from={{ opacity: 0 }} to={{ opacity: 1 }}>
+class Home extends React.Component {
+  componentDidMount() {
+    this.props.set();
+  }
+
+  render = () => (
+    <Spring
+      from={{ opacity: this.props.isMenuVisible === null ? 0 : 1 }}
+      to={{ opacity: 1 }}
+    >
       {props => (
         <div style={props}>
           <section className="home">
@@ -24,6 +31,6 @@ const Home = () => {
       )}
     </Spring>
   );
-};
+}
 
 export default Home;
