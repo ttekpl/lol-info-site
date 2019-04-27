@@ -54,9 +54,10 @@ class Page extends React.Component {
           onMenuItemClick={this.onMenuItemClick}
         />
         <main
-          style={{
-            transform: `translateX(${this.state.isMenuVisible ? "60%" : "0%"})`
-          }}
+          className={` ${this.state.isMenuVisible ? "pushed" : ""}`}
+          // style={{
+          //   transform: `translateX(${this.state.isMenuVisible ? "60%" : "0%"})`
+          // }}
           onClick={this.state.isMenuVisible ? this.toggleMenu : null}
         >
           <Switch>

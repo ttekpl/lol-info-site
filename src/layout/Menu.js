@@ -14,7 +14,7 @@ const Menu = props => {
           transform: `translateX(${props.isMenuVisible ? "0%" : "-100%"})`
         }}
       >
-        <div className="menu__logo">lol info</div>
+        <div className="menu__logo">info</div>
         <ul>
           <NavLink onClick={props.onMenuItemClick} exact to="/">
             Home

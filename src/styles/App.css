@@ -7,11 +7,24 @@
 main {
   transition: transform 0.2s;
 }
+.pushed {
+  transform: translateX(60%);
+}
+
+@media (min-width: 750px) {
+  .pushed {
+    transform: translateX(40%);
+  }
+}
+
 @media (min-width: 1024px) {
   main {
     margin-top: var(--menuHeight);
     transform: translateX(0) !important;
     transition: 0.2s;
+  }
+  .pushed {
+    transform: translateX(0) !important;
   }
 
   .App {

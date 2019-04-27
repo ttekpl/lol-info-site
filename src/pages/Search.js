@@ -34,7 +34,7 @@ class Search extends Component {
 
   onSubmit = e => {
     e.preventDefault();
-    const KEY = "RGAPI-0a57c65a-d3a0-4b99-b3e3-034adf1d5418";
+    const KEY = process.env.REACT_APP_Riot_API_KEY;
     const proxyurl = "https://cors-anywhere.herokuapp.com/";
     const url = `https://eun1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${
       this.state.value

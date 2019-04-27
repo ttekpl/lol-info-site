@@ -42,6 +42,7 @@
   height: 100px;
   border: 1px solid white;
   z-index: 4;
+  display: none;
 }
 .heroMenu ul {
   display: flex;
@@ -70,6 +71,7 @@
 
 @media (min-width: 1024px) {
   .heroMenu {
+    display: block;
   }
   .heroMenu ul {
     display: flex;
@@ -126,10 +128,11 @@ article {
   height: 120vh;
   min-height: 600px;
   background-color: #ddd;
+  position: relative;
 }
 .title {
   position: absolute;
-  top: 110px;
+  top: 100px;
   width: 100vw;
   z-index: 4;
   background-color: white;
@@ -163,7 +166,7 @@ img.splash {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 120px;
+  font-size: 80px;
   font-weight: bold;
   letter-spacing: 12px;
   text-align: center;
@@ -171,15 +174,6 @@ img.splash {
 
 .blurb {
   display: none;
-  z-index: 4;
-  background-color: white;
-  font-size: 22px;
-  padding: 20px;
-  width: 100%;
-  height: 30vh;
-  position: absolute;
-  bottom: 10px;
-  box-shadow: 0 0 10px -6px #333;
 }
 
 @media (min-width: 1024px) {
@@ -239,11 +233,10 @@ img.splash {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 100px;
     font-weight: bold;
     letter-spacing: 8px;
     text-align: center;
-    font-size: 60px;
+    font-size: 100px;
     position: static;
     transform: none;
     width: unset;
@@ -261,6 +254,10 @@ img.splash {
     width: unset;
     display: block;
     position: static;
+    z-index: 4;
+    background-color: white;
+    font-size: 22px;
+    box-shadow: 0 0 10px -6px #333;
   }
 }
 
@@ -306,11 +303,12 @@ h1.role {
   display: flex;
   flex-direction: column;
   height: 50vh;
-  min-height: 300px;
+  min-height: 500px;
   background-color: white;
   justify-content: space-around;
   padding: 20px;
   box-shadow: 0 0 10px -6px #333;
+  margin: 50px 30px;
 }
 
 .bar {
@@ -319,11 +317,17 @@ h1.role {
   height: 50px;
   color: white;
   line-height: 50px;
-  font-size: 20px;
+  font-size: 15px;
   text-align: center;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
-  min-width: 200px;
+  min-width: 100px;
+}
+
+@media (min-width: 1024px) {
+  .bar {
+    font-size: 20px;
+  }
 }
 
 /* ----------------------------------------------------------------------------- */
@@ -331,12 +335,13 @@ h1.role {
 /* ----------------------------------------------------------------------------- */
 div.story {
   background-color: white;
-  box-shadow: -40px -40px #ccc;
-  padding: 20px;
+  box-shadow: -20px -20px #ccc;
+  padding: 10px;
+  margin: 50px 30px;
 }
 
 .story__title {
-  padding: 50px 0;
+  padding: 20px;
   color: #0984e3;
   font-weight: bold;
   font-size: 60px;
@@ -344,7 +349,7 @@ div.story {
 
 p.story {
   text-align: justify;
-  font-size: 25px;
+  font-size: 20px;
   padding: 20px;
 }
 
@@ -352,9 +357,9 @@ p.story {
 /* Skills Section */
 /* ----------------------------------------------------------------------------- */
 
-/* article:nth-child(4) {
-  padding-bottom: 100px;
-} */
+article:nth-child(4) {
+  min-height: 300vh;
+}
 
 .skills__title {
   font-size: 60px;
@@ -367,28 +372,31 @@ p.story {
 .skillsWrap {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: 20px;
+  grid-auto-rows: minmax(400px, auto);
+  grid-gap: 10px;
 }
 
 .skillsWrap div {
+  margin: 50px 10px;
   border: 2px solid #0984e3;
-  padding: 20px;
+  padding: 10px;
   background-color: white;
   box-shadow: 0 0 10px -6px #333;
 }
 
 .skillsWrap h2 {
-  padding: 10px;
+  padding: 5px 0;
+  font-size: 16px;
 }
 
 .skillsWrap p {
-  padding: 10px;
-  text-align: justify;
+  padding: 5px 0;
+  text-align: left;
   font-size: 18px;
 }
 
 .skillsWrap img {
-  padding: 10px;
+  padding: 5px 0;
 }
 
 @media (min-width: 1024px) {
@@ -405,6 +413,7 @@ p.story {
   .skillsWrap div {
     padding: 20px;
     background-color: white;
+    margin: 0;
   }
 
   .skillsWrap h2 {
