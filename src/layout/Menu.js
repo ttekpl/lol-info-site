@@ -4,7 +4,6 @@ import "../styles/Menu.css";
 import { FaBars } from "react-icons/fa";
 
 const Menu = props => {
-  console.log(props.isShort);
   return (
     <>
       <FaBars className="bars" onClick={props.toggle} />

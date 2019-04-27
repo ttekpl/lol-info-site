@@ -20,7 +20,6 @@ class Search extends Component {
   }
 
   onImgLoad = () => {
-    console.log("loadedddd");
     this.setState({
       loaded: true
     });
@@ -43,7 +42,6 @@ class Search extends Component {
     // site that doesn’t send Access-Control-*
     fetch(proxyurl + url) // https://cors-anywhere.herokuapp.com/https://example.com
       .then(response => {
-        console.log(response.status);
         if (response.status === 200) {
           return response.json();
         } else {
@@ -51,7 +49,6 @@ class Search extends Component {
         }
       })
       .then(data => {
-        console.log(data);
         this.setState({
           lvl: data.summonerLevel,
           icon: data.profileIconId,
@@ -66,14 +63,12 @@ class Search extends Component {
         fetch(proxyurl + url) // https://cors-anywhere.herokuapp.com/https://example.com
           .then(response => response.json())
           .then(([data]) => {
-            console.log(data);
             this.setState({
               tier: data.tier,
               rank: data.rank,
               score: data.leaguePoints,
               leagueName: data.leagueName
             });
-            console.log("working");
           })
           .catch(() => {
             console.log(

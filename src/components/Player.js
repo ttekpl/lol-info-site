@@ -13,7 +13,6 @@ const Player = ({
   leagueName,
   trigger
 }) => {
-  console.log(show);
   return (
     <Spring from={{ opacity: 0 }} to={{ opacity: show ? 1 : 0 }}>
       {props => (

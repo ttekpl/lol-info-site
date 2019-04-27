@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
-import "../styles/Page.css";
 import { Spring } from "react-spring/renderprops";
 import { FaCommentDollar } from "react-icons/fa";
 
@@ -12,7 +11,6 @@ class HeroPage extends React.Component {
   };
 
   onImgLoad = () => {
-    console.log("loaded");
     this.setState({
       show: true
     });
@@ -20,8 +18,6 @@ class HeroPage extends React.Component {
 
   componentDidMount = () => {
     this.props.del();
-
-    console.log(";;;;;;;;;;;;;;;;;", this.props.match.params.id);
     const API = `http://ddragon.leagueoflegends.com/cdn/9.6.1/data/en_US/champion/${
       this.props.match.params.id
     }.json`;

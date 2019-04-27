@@ -8,7 +8,6 @@ import {
 } from "react-router-dom";
 
 import Hero from "../components/Hero";
-import "../styles/Page.css";
 import Home from "../pages/Home";
 import HeroPage from "../pages/HeroPage";
 import Menu from "./Menu";
