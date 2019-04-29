@@ -142,7 +142,7 @@ const Hero = ({
                       }.png`}
                       alt=""
                     />
-                    <p>{spells[0].description}</p>
+                    <p>{spells[0].description.replace(/(<([^>]+)>)/gi, "")}</p>
                     <h2>1 lvl cost :{spells[0].cost[0]}</h2>
                     <h2>max lvl cost :{[...spells[0].cost].reverse()[0]}</h2>
                     <h2>1 lvl cooldown :{spells[0].cooldown[0]}</h2>
@@ -159,7 +159,7 @@ const Hero = ({
                       }.png`}
                       alt=""
                     />
-                    <p>{spells[1].description}</p>
+                    <p>{spells[1].description.replace(/(<([^>]+)>)/gi, "")}</p>
                     <h2>1 lvl cost :{spells[1].cost[0]}</h2>
                     <h2>max lvl cost :{[...spells[1].cost].reverse()[0]}</h2>
                     <h2>1 lvl cooldown :{spells[1].cooldown[0]}</h2>
@@ -176,7 +176,7 @@ const Hero = ({
                       }.png`}
                       alt=""
                     />
-                    <p>{spells[2].description}</p>
+                    <p>{spells[2].description.replace(/(<([^>]+)>)/gi, "")}</p>
                     <h2>1 lvl cost :{spells[2].cost[0]}</h2>
                     <h2>max lvl cost :{[...spells[2].cost].reverse()[0]}</h2>
                     <h2>1 lvl cooldown :{spells[2].cooldown[0]}</h2>
@@ -193,7 +193,7 @@ const Hero = ({
                       }.png`}
                       alt=""
                     />
-                    <p>{spells[3].description}</p>
+                    <p>{spells[3].description.replace(/(<([^>]+)>)/gi, "")}</p>
                     <h2>1 lvl cost :{spells[3].cost[0]}</h2>
                     <h2>max lvl cost :{[...spells[3].cost].reverse()[0]}</h2>
                     <h2>1 lvl cooldown :{spells[3].cooldown[0]}</h2>
