@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/lol-info-site/static/js/runtime~main.e13671b3.js"
   },
   {
-    "revision": "0d2b0205b473418ea3bf",
-    "url": "/lol-info-site/static/js/main.696101f8.chunk.js"
+    "revision": "ada62c6bc05683b05e6d",
+    "url": "/lol-info-site/static/js/main.d4693369.chunk.js"
   },
   {
     "revision": "1a915a78697cbd3adae7",
     "url": "/lol-info-site/static/js/2.9f6e2d3a.chunk.js"
   },
   {
-    "revision": "0d2b0205b473418ea3bf",
+    "revision": "ada62c6bc05683b05e6d",
     "url": "/lol-info-site/static/css/main.ab8d385d.chunk.css"
   },
   {
-    "revision": "3ad78346dc30d8d9b0c973b097211d1d",
+    "revision": "d5b39adf8818672ff1f5988127cf12e1",
     "url": "/lol-info-site/index.html"
   }
 ];
