@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/lol-info-site/static/css/main.ab8d385d.chunk.css"
   },
   {
-    "revision": "1066877b5e5863c25bcb6d3fab560f3b",
+    "revision": "71221e9256f5e0eed167e6d95752a212",
     "url": "/lol-info-site/index.html"
   }
 ];
