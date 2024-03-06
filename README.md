@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Opis projektu
+
+Prosta aplikacja front-endowa zintegrowana z api RiotGames do wyświetlania opisu postaci z gry komputerowej League of Legends
+
 ## Available Scripts
 
 In the project directory, you can run:
